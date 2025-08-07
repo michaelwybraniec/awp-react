@@ -138,7 +138,7 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 - [x] 1.4.2. Set up debugging configuration
 - [x] 1.4.3. Set up Storybook for component documentation
 - [x] 1.4.4. Configure CI/CD pipeline basics
-- [ ] 1.4.5. Set up E2E testing with Playwright or Cypress
+- [x] 1.4.5. Set up E2E testing with Playwright or Cypress
 - [ ] 1.4.6. Configure test coverage reporting and thresholds
 
   1.5. [ ] Create basic project documentation and README
@@ -412,6 +412,7 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 - [ ] 1.11: Upgrade to Husky v10.0.0 - When Husky v10.0.0 is released, upgrade to resolve deprecation warnings about pre-commit hook format
 - [x] 1.12: Fix UI Styling Issues - Tailwind CSS styles not being applied, page rendering with basic unstyled HTML (black text, white background, blue underlined links) - Fixed Tailwind config to use standard color values instead of CSS variables, resolved all utility class errors
 - [ ] 1.13: Unplanned task, Name, Title, Description, etc.
+- [x] 1.14: Fix CI/CD Pipeline Configuration Issues - Fixed duplicate content in ci.yml, added proper error handling for E2E tests, improved coverage upload conditions, and resolved CI workflow structure
 
 ## Procedures
 
