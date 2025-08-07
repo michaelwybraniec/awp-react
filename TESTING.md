@@ -1,269 +1,219 @@
 # Testing Guide
 
-This document describes the testing setup and guidelines for the AWP React Platform.
+This document outlines the testing strategy, coverage requirements, and best practices for the AWP React project.
 
-## Testing Stack
+## 🧪 Testing Overview
 
-- **Vitest**: Fast unit testing framework
-- **React Testing Library**: Component testing utilities
-- **@testing-library/jest-dom**: Custom Jest matchers
-- **@testing-library/user-event**: User interaction simulation
-- **jsdom**: DOM environment for testing
+The project uses a comprehensive testing strategy with multiple layers:
 
-## Test Structure
+- **Unit Tests**: Vitest + React Testing Library
+- **Integration Tests**: Component interaction testing
+- **E2E Tests**: Playwright for end-to-end testing
+- **Storybook Tests**: Component testing with Storybook
+- **Coverage Reporting**: V8 coverage with thresholds
+
+## 📊 Coverage Requirements
+
+### Global Thresholds
+
+- **Branches**: 80%
+- **Functions**: 80%
+- **Lines**: 80%
+- **Statements**: 80%
+
+### Directory-Specific Thresholds
+
+#### Components (`./src/components/`)
+
+- **Branches**: 85%
+- **Functions**: 85%
+- **Lines**: 85%
+- **Statements**: 85%
+
+#### Library (`./src/lib/`)
+
+- **Branches**: 90%
+- **Functions**: 90%
+- **Lines**: 90%
+- **Statements**: 90%
+
+#### Hooks (`./src/hooks/`)
+
+- **Branches**: 85%
+- **Functions**: 85%
+- **Lines**: 85%
+- **Statements**: 85%
+
+#### Utils (`./src/utils/`)
+
+- **Branches**: 90%
+- **Functions**: 90%
+- **Lines**: 90%
+- **Statements**: 90%
+
+## 🚀 Test Commands
+
+### Basic Testing
+
+```bash
+npm test              # Run all tests
+npm run test:watch    # Run tests in watch mode
+npm run test:ui       # Open Vitest UI
+```
+
+### Coverage Commands
+
+```bash
+npm run test:coverage           # Generate coverage report
+npm run test:coverage:watch     # Coverage in watch mode
+npm run test:coverage:report    # Generate HTML coverage report
+npm run test:coverage:check     # Check coverage thresholds
+```
+
+### E2E Testing
+
+```bash
+npm run test:e2e              # Run E2E tests
+npm run test:e2e:ui           # E2E tests with UI
+npm run test:e2e:debug        # E2E tests in debug mode
+npm run test:e2e:report       # Show E2E test report
+```
+
+## 📁 Test Structure
 
 ```
 src/
 ├── test/
-│   ├── setup.ts          # Test environment setup
-│   ├── utils.tsx         # Test utilities and helpers
-│   └── example.test.tsx  # Example tests
-├── components/           # Component tests alongside components
-│   └── ComponentName/
-│       ├── ComponentName.tsx
-│       └── ComponentName.test.tsx
-└── lib/                  # Library function tests
-    └── functionName.test.ts
+│   ├── setup.ts              # Test environment setup
+│   ├── utils.tsx             # Testing utilities
+│   └── example.test.tsx      # Example test
+├── components/
+│   └── ui/
+│       └── button.test.tsx   # Component tests
+└── lib/
+    └── utils.test.ts         # Utility function tests
 ```
 
-## Running Tests
+## 🎯 Writing Tests
 
-### Basic Commands
-
-```bash
-# Run all tests
-npm test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Run tests with coverage
-npm run test:coverage
-
-# Run tests with UI
-npm run test:ui
-
-# Run specific test file
-npx vitest run src/test/example.test.tsx
-
-# Run tests matching a pattern
-npx vitest run --grep "configuration"
-```
-
-### Test Scripts
-
-- `npm test`: Run all tests once
-- `npm run test:watch`: Run tests in watch mode (re-runs on file changes)
-- `npm run test:coverage`: Generate coverage report
-- `npm run test:ui`: Open Vitest UI for interactive testing
-
-## Writing Tests
-
-### Component Testing
+### Component Testing Example
 
 ```tsx
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@/test/utils';
-import { MyComponent } from './MyComponent';
+import { Button } from '@/components/ui/button';
 
-describe('MyComponent', () => {
-  it('renders correctly', () => {
-    render(<MyComponent />);
-    expect(screen.getByText('Hello')).toBeInTheDocument();
+describe('Button Component', () => {
+  it('renders with correct text', () => {
+    render(<Button>Click me</Button>);
+    expect(screen.getByRole('button')).toHaveTextContent('Click me');
   });
 
-  it('handles user interactions', async () => {
-    const user = setupUser();
-    render(<MyComponent />);
-
+  it('applies variant classes correctly', () => {
+    render(<Button variant='destructive'>Delete</Button>);
     const button = screen.getByRole('button');
-    await user.click(button);
-
-    expect(screen.getByText('Clicked!')).toBeInTheDocument();
+    expect(button).toHaveClass('bg-destructive');
   });
 });
 ```
 
-### Utility Function Testing
+### Utility Function Testing Example
 
 ```tsx
 import { describe, it, expect } from 'vitest';
-import { formatDate } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 
-describe('formatDate', () => {
-  it('formats date correctly', () => {
-    const date = new Date('2023-01-01');
-    expect(formatDate(date)).toBe('01/01/2023');
+describe('cn utility', () => {
+  it('combines class names correctly', () => {
+    expect(cn('class1', 'class2')).toBe('class1 class2');
+  });
+
+  it('handles conditional classes', () => {
+    expect(cn('base', { conditional: true })).toBe('base conditional');
+    expect(cn('base', { conditional: false })).toBe('base');
   });
 });
 ```
 
-### API Testing
+## 📈 Coverage Reports
 
-```tsx
-import { describe, it, expect, vi } from 'vitest';
-import { render, screen, waitFor } from '@/test/utils';
-import { UserList } from './UserList';
+### HTML Report
 
-// Mock API calls
-vi.mock('@/lib/api', () => ({
-  getUsers: vi.fn(() =>
-    Promise.resolve([
-      { id: '1', name: 'John Doe' },
-      { id: '2', name: 'Jane Smith' },
-    ])
-  ),
-}));
+Run `npm run test:coverage:report` to generate an HTML coverage report. The report will be available in the `coverage/` directory.
 
-describe('UserList', () => {
-  it('loads and displays users', async () => {
-    render(<UserList />);
+### Console Report
 
-    await waitFor(() => {
-      expect(screen.getByText('John Doe')).toBeInTheDocument();
-      expect(screen.getByText('Jane Smith')).toBeInTheDocument();
-    });
-  });
-});
-```
+The default coverage command (`npm run test:coverage`) provides a console report showing:
 
-## Test Utilities
+- Coverage percentages by file
+- Threshold compliance
+- Uncovered lines
 
-### Custom Render Function
+### LCOV Report
 
-The `@/test/utils` provides a custom render function that includes common providers:
+LCOV format is generated for CI/CD integration with services like Codecov.
 
-```tsx
-import { render } from '@/test/utils';
+## 🔧 Configuration
 
-// Use instead of @testing-library/react render
-render(<MyComponent />);
-```
+### Coverage Configuration
 
-### Test Data Factories
+Coverage settings are defined in `coverage.config.js`:
 
-Use the provided factory functions to create consistent test data:
+- Thresholds by directory
+- Excluded files and patterns
+- Report formats
+- Coverage provider (V8)
 
-```tsx
-import { createMockUser, createMockLab } from '@/test/utils';
+### Vitest Configuration
 
-const user = createMockUser({ name: 'Custom Name' });
-const lab = createMockLab({ location: 'Custom Location' });
-```
+Main test configuration is in `vitest.config.ts`:
 
-### User Event Setup
+- Test environment (jsdom)
+- Setup files
+- Path aliases
+- Storybook integration
 
-```tsx
-import { setupUser } from '@/test/utils';
+## 🚨 Coverage Failures
 
-const user = setupUser();
-await user.click(button);
-await user.type(input, 'text');
-```
+If coverage thresholds are not met:
 
-## Testing Guidelines
-
-### 1. Test Structure
-
-- Use descriptive test names
-- Group related tests with `describe` blocks
-- Follow the AAA pattern: Arrange, Act, Assert
-
-### 2. Component Testing
-
-- Test user interactions, not implementation details
-- Use semantic queries (getByRole, getByLabelText)
-- Avoid testing internal state or props directly
-
-### 3. Accessibility Testing
-
-- Test keyboard navigation
-- Verify screen reader compatibility
-- Check ARIA attributes
-
-### 4. Async Testing
-
-- Use `waitFor` for async operations
-- Mock external dependencies
-- Test loading and error states
-
-### 5. Coverage
-
-- Aim for 80%+ code coverage
-- Focus on critical user paths
-- Test edge cases and error scenarios
-
-## Mocking
-
-### Next.js Components
-
-The test setup includes mocks for common Next.js components:
-
-- `next/navigation` (useRouter, useSearchParams, etc.)
-- `next/image` (Image component)
-
-### Environment Variables
-
-Test environment variables are set in `src/test/setup.ts`:
-
-```tsx
-process.env.NEXT_PUBLIC_APP_NAME = 'AWP React Platform Test';
-process.env.NEXTAUTH_SECRET = 'test-secret';
-```
-
-### Browser APIs
-
-Common browser APIs are mocked:
-
-- `ResizeObserver`
-- `IntersectionObserver`
-- `matchMedia`
-
-## Coverage Reports
-
-Run coverage to see test coverage:
-
-```bash
-npm run test:coverage
-```
-
-This generates:
-
-- Console output with coverage summary
-- HTML report in `coverage/` directory
-- JSON report for CI/CD integration
-
-## Continuous Integration
-
-Tests are automatically run in CI/CD pipelines:
-
-- Pre-commit hooks run tests
-- Pull requests require passing tests
-- Coverage thresholds are enforced
-
-## Troubleshooting
+1. **Check the coverage report** to identify uncovered code
+2. **Add tests** for uncovered branches and functions
+3. **Review excluded files** to ensure proper exclusions
+4. **Update thresholds** if requirements change
 
 ### Common Issues
 
-1. **Import errors**: Ensure path aliases are configured correctly
-2. **Mock not working**: Check that mocks are defined before imports
-3. **Async test failures**: Use `waitFor` for async operations
-4. **Environment variables**: Verify test setup includes required env vars
+- **Missing edge case tests**: Add tests for conditional branches
+- **Untested error handling**: Test error scenarios
+- **Unused code**: Remove or test unused functions
+- **Configuration files**: Ensure proper exclusions
 
-### Debug Mode
+## 📋 Best Practices
 
-Run tests in debug mode for more verbose output:
+### Test Organization
 
-```bash
-npx vitest run --reporter=verbose
-```
+- Group related tests in `describe` blocks
+- Use descriptive test names
+- Follow AAA pattern (Arrange, Act, Assert)
 
-## Best Practices
+### Coverage Strategy
 
-1. **Write tests first** (TDD) for complex features
-2. **Keep tests simple** and focused
-3. **Use meaningful assertions** that test behavior
-4. **Mock external dependencies** to isolate units
-5. **Test error scenarios** and edge cases
-6. **Maintain test data** with factory functions
-7. **Update tests** when changing component behavior
+- Focus on critical user paths
+- Test error conditions and edge cases
+- Maintain high coverage for utility functions
+- Use integration tests for complex interactions
+
+### Performance
+
+- Keep tests fast and focused
+- Use mocks for external dependencies
+- Avoid testing implementation details
+- Use test utilities for common patterns
+
+## 🔗 Resources
+
+- [Vitest Documentation](https://vitest.dev/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Playwright Documentation](https://playwright.dev/)
+- [Storybook Testing](https://storybook.js.org/docs/writing-tests/introduction)

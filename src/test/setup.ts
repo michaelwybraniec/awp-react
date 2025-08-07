@@ -36,19 +36,21 @@ process.env.NEXTAUTH_URL = 'http://localhost:3000';
 process.env.NEXTAUTH_SECRET = 'test-secret';
 process.env.NEXTAUTH_JWT_SECRET = 'test-jwt-secret';
 
-// Global test utilities
-global.ResizeObserver = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
-}));
+// Global test utilities (only in Node.js environment)
+if (typeof global !== 'undefined') {
+  global.ResizeObserver = vi.fn().mockImplementation(() => ({
+    observe: vi.fn(),
+    unobserve: vi.fn(),
+    disconnect: vi.fn(),
+  }));
 
-// Mock IntersectionObserver
-global.IntersectionObserver = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
-}));
+  // Mock IntersectionObserver
+  global.IntersectionObserver = vi.fn().mockImplementation(() => ({
+    observe: vi.fn(),
+    unobserve: vi.fn(),
+    disconnect: vi.fn(),
+  }));
+}
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
