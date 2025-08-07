@@ -113,7 +113,7 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
    - [x] 1.1.3. Set up environment variables and configuration files
    - [x] 1.1.4. Initialize Git repository with proper .gitignore
    - [x] 1.1.5. Configure build and development scripts
-   - [ ] 1.1.6. Set up testing framework (Jest/Vitest) with React Testing Library
+   - [x] 1.1.6. Set up testing framework (Jest/Vitest) with React Testing Library
 
 2. [ ] 1.2: Set up Tailwind CSS and shadcn/ui component library
    - [ ] 1.2.1. Install and configure Tailwind CSS v3+ with custom theme
@@ -369,7 +369,7 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 
 ## Unplanned Tasks
 
-- [ ] 1.1: Unplanned task, Name, Title, Description, etc.
+- [ ] 1.1: Test Coverage Review and Improvement - Review current test coverage and improve it to meet 80%+ threshold, focusing on critical user paths and edge cases
 - [ ] 1.2: Unplanned task, Name, Title, Description, etc.
 
 ## Procedures
