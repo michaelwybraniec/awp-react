@@ -4,43 +4,42 @@
 
 1. This Agentic Workflow Protocol (AWP) governs collaboration between human and AI contributors. The following principles must always be followed:
 
-    1.1. All work is guided strictly by the AWP; no deviations or improvisation.
+   1.1. All work is guided strictly by the AWP; no deviations or improvisation.
 
-    1.2. The AI must always listen to the human, never override instructions, and never take initiative beyond what is explicitly requested.
+   1.2. The AI must always listen to the human, never override instructions, and never take initiative beyond what is explicitly requested.
 
-    1.3. Every change or decision must be validated by the human before proceeding.
+   1.3. Every change or decision must be validated by the human before proceeding.
 
-    1.4. The AI must never hide changes or actions; transparency is required at all times.
+   1.4. The AI must never hide changes or actions; transparency is required at all times.
 
-    1.5. If instructions from the human are unclear, the AI must ask clarifying questions and never assume or anticipate requirements.
+   1.5. If instructions from the human are unclear, the AI must ask clarifying questions and never assume or anticipate requirements.
 
-    1.6. The protocol is designed to ensure trust, clarity, and effective collaboration between human and AI.
+   1.6. The protocol is designed to ensure trust, clarity, and effective collaboration between human and AI.
 
-    1.7. The AI must never make assumptions or take initiative beyond what is explicitly requested.
+   1.7. The AI must never make assumptions or take initiative beyond what is explicitly requested.
 
-    1.8. Always use the commit standard for all changes.
+   1.8. Always use the commit standard for all changes.
 
-    1.9. Never override the human's instructions, or any content in this AWP.
+   1.9. Never override the human's instructions, or any content in this AWP.
 
-    1.10. Use numbers to reference changes in this AWP. Format 1.1, 1.2, 1.3, etc.
+   1.10. Use numbers to reference changes in this AWP. Format 1.1, 1.2, 1.3, etc.
 
-    1.11. Never use the word "AI" in any commit message.
+   1.11. Never use the word "AI" in any commit message.
 
-    1.12 Read this AWP.md and if exists the main README.md to understand the workflow and project goal.
+   1.12 Read this AWP.md and if exists the main README.md to understand the workflow and project goal.
 
-    1.13 If you see blockers or have suggestions, document it in Unplanned Tasks section and notify human.
+   1.13 If you see blockers or have suggestions, document it in Unplanned Tasks section and notify human.
 
-    1.14 Always respect human oversight and approval gates
-    
-    1.15. Never make critical business decisions without human approval
+   1.14 Always respect human oversight and approval gates
 
-    1.16. Always document your reasoning and decisions
+   1.15. Never make critical business decisions without human approval
 
-    1.17. Follow the commit standard and reference step numbers
+   1.16. Always document your reasoning and decisions
 
-    1.18. The protocol is designed to ensure trust, clarity, and effective collaboration between human and AI.
+   1.17. Follow the commit standard and reference step numbers
 
-    
+   1.18. The protocol is designed to ensure trust, clarity, and effective collaboration between human and AI.
+
 ## Author
 
 Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
@@ -85,31 +84,32 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 
 ## Collaboration
 
-- **ai_agent_senior_developer:**  Senior Developer (AI Agent)
-- **ai_agent_junior_developer:**  Junior Developer (AI Agent)
-- **ai_agent_designer:**  Designer (AI Agent)
-- **ai_agent_tester:**  Tester (AI Agent)
-- **ai_agent_documentation:**  Documentation (AI Agent)
-- **ai_agent_project_manager:**  Project Manager (AI Agent)
-- **ai_agent_product_owner:**  Product Owner (AI Agent)
-- **ai_agent_scrum_master:**  Scrum Master (AI Agent)
-- **human_developer:**  Developer (Human)
-- **human_designer:**  Designer (Human)
-- **human_tester:**  Tester (Human)
-- **human_documentation:**  Documentation (Human)
-- **human_project_manager:**  Project Manager (Human)
-- **human_product_owner:**  Product Owner (Human)
-- **human_scrum_master:**  Scrum Master (Human)
+- **ai_agent_senior_developer:** Senior Developer (AI Agent)
+- **ai_agent_junior_developer:** Junior Developer (AI Agent)
+- **ai_agent_designer:** Designer (AI Agent)
+- **ai_agent_tester:** Tester (AI Agent)
+- **ai_agent_documentation:** Documentation (AI Agent)
+- **ai_agent_project_manager:** Project Manager (AI Agent)
+- **ai_agent_product_owner:** Product Owner (AI Agent)
+- **ai_agent_scrum_master:** Scrum Master (AI Agent)
+- **human_developer:** Developer (Human)
+- **human_designer:** Designer (Human)
+- **human_tester:** Tester (Human)
+- **human_documentation:** Documentation (Human)
+- **human_project_manager:** Project Manager (Human)
+- **human_product_owner:** Product Owner (Human)
+- **human_scrum_master:** Scrum Master (Human)
 - **approver:** Human Only (Human)
-- **approval_timeout:**  10 minutes
-- **auto_handoff:**  true
+- **approval_timeout:** 10 minutes
+- **auto_handoff:** true
 
 ## Project Backlog
 
 ### 1. Project Foundation & Setup
+
 1. [x] 1.1: Initialize React TypeScript project with Next.js
    - [x] 1.1.1. Set up Next.js 14+ with App Router and TypeScript
-   - [ ] 1.1.2. Configure ESLint, Prettier, and Husky for code quality
+   - [x] 1.1.2. Configure ESLint, Prettier, and Husky for code quality
    - [ ] 1.1.3. Set up environment variables and configuration files
    - [ ] 1.1.4. Initialize Git repository with proper .gitignore
    - [ ] 1.1.5. Configure build and development scripts
@@ -152,6 +152,7 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
    - [ ] 1.6.5. Test app build process (npm run build)
 
 ### 2. Authentication & User Management
+
 6. [ ] 2.1: Design user authentication system (login/register)
    - [ ] 2.1.1. Implement NextAuth.js or Clerk for authentication
    - [ ] 2.1.2. Create login/register forms with validation (react-hook-form + zod)
@@ -205,6 +206,7 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
     - [ ] 2.6.5. Test password reset and account verification manually
 
 ### 3. Core Platform Features
+
 12. [ ] 3.1: Design and implement dashboard for both user types
     - [ ] 3.1.1. Create role-specific dashboard layouts and components
     - [ ] 3.1.2. Implement real-time data visualization with charts (recharts)
@@ -258,6 +260,7 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
     - [ ] 3.6.5. Test partnership proposal system manually
 
 ### 4. Collaboration Tools
+
 18. [ ] 4.1: Build messaging and communication system
     - [ ] 4.1.1. Implement real-time chat with WebSocket (Socket.io)
     - [ ] 4.1.2. Create group chat and direct messaging functionality
@@ -311,6 +314,7 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
     - [ ] 4.6.5. Test notification and alert system manually
 
 ### 5. Advanced Features & Integration
+
 24. [ ] 5.1: Implement advanced search and filtering
     - [ ] 5.1.1. Build Elasticsearch or Algolia integration for fast search
     - [ ] 5.1.2. Implement faceted search with multiple filter categories
@@ -368,70 +372,71 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 - [ ] 1.1: Unplanned task, Name, Title, Description, etc.
 - [ ] 1.2: Unplanned task, Name, Title, Description, etc.
 
-
 ## Procedures
 
 1. **update**
 
-    1.1. Review README.md and AWP.md after each step.
+   1.1. Review README.md and AWP.md after each step.
 
-    1.2. Update README.md to reflect the current state
+   1.2. Update README.md to reflect the current state
 
-    1.3. We review AWP.md to understand next actions.
+   1.3. We review AWP.md to understand next actions.
 
-    1.4. Check for blockers, if any we notify humans.
+   1.4. Check for blockers, if any we notify humans.
 
-    1.5. Ensure docs and code are aligned, of not, notify humans.
+   1.5. Ensure docs and code are aligned, of not, notify humans.
 
 2. **commit**
 
-    2.1. Commit changes using the commitStandard.
+   2.1. Commit changes using the commitStandard.
 
-    2.2. Use the format: type(scope step): subject.
+   2.2. Use the format: type(scope step): subject.
 
-    2.3. Reference the step number in every commit message.
+   2.3. Reference the step number in every commit message.
 
-    2.4. Follow conventional commit standards.
+   2.4. Follow conventional commit standards.
 
-    2.5. Include relevant files.
+   2.5. Include relevant files.
 
 3. **next**
 
-    3.1. Move to the next actionable step only after update and commit are complete.
+   3.1. Move to the next actionable step only after update and commit are complete.
 
-    3.2. Identify the next actionable step and begin work.
+   3.2. Identify the next actionable step and begin work.
 
-    3.3. Check for blockers before proceeding, and confirm additional plan with human.
+   3.3. Check for blockers before proceeding, and confirm additional plan with human.
 
-    3.4. Mark the current step 'check' [ ] as done before you start.
+   3.4. Mark the current step 'check' [ ] as done before you start.
 
 4. **check**
 
-    4.1. Review AWP.md to determine the current actionable step.
+   4.1. Review AWP.md to determine the current actionable step.
 
-    4.2. Find the first step not done.
+   4.2. Find the first step not done.
 
-    4.3. Restore context and understand what needs to be done.
+   4.3. Restore context and understand what needs to be done.
 
-    4.4. Use this when returning to work after a break or context loss.
+   4.4. Use this when returning to work after a break or context loss.
 
 5. **handoff**
 
-    5.1. Transfer task ownership between human and AI.
+   5.1. Transfer task ownership between human and AI.
 
-    5.2. Package current context and deliverables.
+   5.2. Package current context and deliverables.
 
-    5.3. Notify receiving party with clear expectations.
+   5.3. Notify receiving party with clear expectations.
 
-    5.4. Set timeout for response and escalation rules.
+   5.4. Set timeout for response and escalation rules.
 
 ## Human Notes
+
 1. Reference the step in every commit.
 2. Update this file as the project progresses.
 3. Check off each item as you complete it.
 4. Respect human-AI collaboration boundaries.
 
 ## Commit Standard
+
 - **format:** type(scope step): subject
 - **types:** feat, fix, docs, test, chore
 - **rules:**
