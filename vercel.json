@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "awp-react",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_APP_NAME": "AWP React Platform",
+    "NEXT_PUBLIC_APP_VERSION": "0.1.0"
+  },
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 10
+    }
+  }
+}
