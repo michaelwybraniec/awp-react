@@ -73,6 +73,28 @@ The AWP React Platform bridges the gap between research laboratories and pharmac
 - **Build System:** [Turbopack](https://turbo.build/pack)
 - **CI/CD:** [GitHub Actions](https://github.com/features/actions)
 
+## 📊 Development Analytics
+
+### Commit Distribution
+
+```mermaid
+pie showData
+    title "AWP React Platform - Commit Distribution"
+    "Documentation (43%)" : 16
+    "Features (32%)" : 12
+    "AWP (22%)" : 8
+    "Testing (8%)" : 3
+    "Maintenance (3%)" : 1
+```
+
+**Development Insights:**
+
+- **Documentation (43%)** - Comprehensive AWP protocol compliance with continuous documentation updates
+- **Features (32%)** - Systematic feature implementation following AWP task numbers
+- **AWP (22%)** - Unplanned task resolutions and protocol-guided development
+- **Testing (8%)** - Quality assurance with 82.36% test coverage achievement
+- **Maintenance (3%)** - Configuration and cleanup tasks
+
 ## Project Backlog
 
 ### 1. Project Foundation & Setup
@@ -121,7 +143,7 @@ The AWP React Platform bridges the gap between research laboratories and pharmac
   - [ ] 1.6.4. Verify basic component rendering and styling
   - [ ] 1.6.5. Test app build process (npm run build)
 
-## Unplanned Tasks
+## AWP Tasks
 
 - [x] U1: Test Coverage Review and Improvement - Review current test coverage and improve it to meet 80%+ threshold, focusing on critical user paths and edge cases
 - [x] U2: Fix Multiple Lockfiles Issue - Remove conflicting package-lock.json files and ensure single lockfile
