@@ -73,51 +73,80 @@ The AWP React Platform bridges the gap between research laboratories and pharmac
 - **Build System:** [Turbopack](https://turbo.build/pack)
 - **CI/CD:** [GitHub Actions](https://github.com/features/actions)
 
-## 📊 Current Status
+## Project Backlog
 
-### ✅ **Phase 1: Foundation & Setup** (COMPLETED)
+### 1. Project Foundation & Setup
 
-- ✅ **1.1. Project Initialization**
-  - ✅ 1.1.1. Create Next.js project with TypeScript
-  - ✅ 1.1.2. Configure Tailwind CSS and shadcn/ui
-  - ✅ 1.1.3. Set up ESLint and Prettier
-  - ✅ 1.1.4. Configure Git hooks with Husky
-  - ✅ 1.1.5. Initialize Git repository
+- [x] 1.1. Initialize React TypeScript project with Next.js
+  - [x] 1.1.1. Set up Next.js 14+ with App Router and TypeScript
+  - [x] 1.1.2. Configure ESLint, Prettier, and Husky for code quality
+  - [x] 1.1.3. Set up environment variables and configuration files
+  - [x] 1.1.4. Initialize Git repository with proper .gitignore
+  - [x] 1.1.5. Configure build and development scripts
+  - [x] 1.1.6. Set up testing framework (Jest/Vitest) with React Testing Library
 
-- ✅ **1.2. Development Environment**
-  - ✅ 1.2.1. Configure VS Code settings and extensions
-  - ✅ 1.2.2. Set up debugging configuration
-  - ✅ 1.2.3. Configure TypeScript strict mode
-  - ✅ 1.2.4. Set up path aliases and imports
-  - ✅ 1.2.5. Configure build and development scripts
+- [x] 1.2. Set up Tailwind CSS and shadcn/ui component library
+  - [x] 1.2.1. Install and configure Tailwind CSS v3+ with custom theme
+  - [x] 1.2.2. Set up shadcn/ui with CLI and component configuration
+  - [x] 1.2.3. Create custom color palette and design tokens
+  - [x] 1.2.4. Configure responsive breakpoints and typography
+  - [x] 1.2.5. Set up component variants and utility classes
 
-- ✅ **1.3. Testing Infrastructure**
-  - ✅ 1.3.1. Set up Vitest for unit testing
-  - ✅ 1.3.2. Configure React Testing Library
-  - ✅ 1.3.3. Set up Playwright for E2E testing
-  - ✅ 1.3.4. Configure test coverage reporting
-  - ✅ 1.3.5. Set up Storybook for component development
+- [x] 1.3. Configure project structure and folder organization
+  - [x] 1.3.1. Create organized folder structure (components, lib, hooks, types, etc.)
+  - [x] 1.3.2. Set up barrel exports for clean imports
+  - [x] 1.3.3. Configure path aliases in tsconfig.json
+  - [x] 1.3.4. Create shared types and interfaces
+  - [x] 1.3.5. Set up layout components and page structure
 
-- ✅ **1.4. Core UI Components**
-  - ✅ 1.4.1. Create Button component with variants
-  - ✅ 1.4.2. Create Input component with validation
-  - ✅ 1.4.3. Create Card component with sub-components
-  - ✅ 1.4.4. Create Container component with responsive design
-  - ✅ 1.4.5. Create Header and Footer components
-  - ✅ 1.4.6. **CRITICAL** - Improve Test Coverage to Meet Thresholds ✅ **COMPLETED: 82.36% coverage achieved!**
+- [x] 1.4. Set up development environment and tooling
+  - [x] 1.4.1. Configure VS Code settings and extensions
+  - [x] 1.4.2. Set up debugging configuration
+  - [x] 1.4.3. Set up Storybook for component documentation
+  - [x] 1.4.4. Configure CI/CD pipeline basics
+  - [x] 1.4.5. Set up E2E testing with Playwright or Cypress
+  - [x] 1.4.6. Configure test coverage reporting and thresholds
 
-### 🔄 **Phase 2: Authentication & User Management** (NEXT)
+- [ ] 1.5. Create basic project documentation and README
+  - [ ] 1.5.1. Write comprehensive README with setup instructions
+  - [ ] 1.5.2. Document project architecture and conventions
+  - [ ] 1.5.3. Create component documentation guidelines
+  - [ ] 1.5.4. Set up API documentation structure
+  - [ ] 1.5.5. Document deployment procedures
 
-- 🔄 **2.1. User Authentication System**
-- 🔄 **2.2. User Registration and Profile Management**
-- 🔄 **2.3. Role-Based Access Control**
-- 🔄 **2.4. Security and Validation**
-- 🔄 **2.5. Password Reset and Account Verification**
-- 🔄 **2.6. Manual Testing of Authentication System**
+- [ ] 1.6. Verify app startup and basic functionality
+  - [ ] 1.6.1. Ensure app starts successfully with npm run dev
+  - [ ] 1.6.2. Verify basic page routing and navigation works
+  - [ ] 1.6.3. Test responsive design on different screen sizes
+  - [ ] 1.6.4. Verify basic component rendering and styling
+  - [ ] 1.6.5. Test app build process (npm run build)
 
-### 📋 **Project Backlog**
+## Unplanned Tasks
 
-**[AWP.md - Project Backlog](agentic-sldc/AWP.md#project-backlog)**
+- [x] U1: Test Coverage Review and Improvement - Review current test coverage and improve it to meet 80%+ threshold, focusing on critical user paths and edge cases
+- [x] U2: Fix Multiple Lockfiles Issue - Remove conflicting package-lock.json files and ensure single lockfile
+- [x] U3: Address ESLint Warnings - Fix console statements and replace `any` types with proper TypeScript types
+- [x] U4: Fix Tailwind CSS Configuration - Resolve unknown utility class `ring-primary-500` error
+- [x] U5: Address ESLint Warnings - Fix console statements and replace `any` types with proper TypeScript types
+- [x] U6: Fix Next.js Turbopack Configuration - Update deprecated `experimental.turbo` to `config.turbopack` as Turbopack is now stable in Next.js 15.4.6
+- [x] U7: Fix Husky Pre-commit Hook Deprecation - Remove deprecated lines from .husky/pre-commit file to prevent failures in Husky v10.0.0 (Note: Warning persists due to Husky v9.1.7, will resolve when upgrading to v10.0.0)
+- [x] U8: Resolve Persistent Husky Deprecation Warning - The pre-commit hook was reverted to deprecated format, causing persistent warnings about Husky v10.0.0 compatibility
+- [x] U9: Fix Husky Prepare Script Issue - The 'prepare: husky' script in package.json restores deprecated format, need to either remove prepare script or configure Husky properly
+- [ ] U10: Persistent Husky Configuration Issue - User keeps reverting Husky pre-commit file and package.json prepare script back to deprecated format, causing persistent warnings
+- [ ] U11: Upgrade to Husky v10.0.0 - When Husky v10.0.0 is released, upgrade to resolve deprecation warnings about pre-commit hook format
+- [x] U12: Fix UI Styling Issues - Tailwind CSS styles not being applied, page rendering with basic unstyled HTML (black text, white background, blue underlined links) - Fixed Tailwind config to use standard color values instead of CSS variables, resolved all utility class errors
+- [ ] U13: Unplanned task, Name, Title, Description, etc.
+- [x] U14: Fix CI/CD Pipeline Configuration Issues - Fixed duplicate content in ci.yml, added proper error handling for E2E tests, improved coverage upload conditions, and resolved CI workflow structure
+- [ ] U15: E2E Test Content Validation - Verify that E2E tests expect content that actually exists on the page, ensure all test assertions match the current page content and navigation elements
+- [ ] U16: Configure Actual Deployment - Replace placeholder deployment configuration in CI/CD pipeline with actual deployment setup (Vercel, Netlify, or other platform)
+- [x] U17: Test Coverage Configuration Issues - Resolved environment conflicts between Node.js and browser test environments, fixed global object access in test setup, configured proper path aliases for Vitest, and excluded node_modules from coverage runs
+- [x] U18: **CRITICAL** - Improve Test Coverage to Meet Thresholds - ✅ COMPLETED: Achieved 82.36% coverage (256 tests) exceeding 80% threshold. Added comprehensive tests for all components, pages, and utilities. All major modules now have 100% coverage except variants.ts and types directory.
+- [ ] U19: Storybook Test Integration - Temporarily disabled Storybook tests in coverage due to environment conflicts, need to properly configure Storybook test environment to work with Vitest coverage reporting
+- [ ] U20: Coverage Report Optimization - Consider implementing coverage badges, CI integration for coverage reporting, and automated coverage threshold enforcement in pull requests
+
+## 📋 **Full Project Backlog**
+
+_For complete project roadmap and detailed task breakdown, see [AWP.md](agentic-sldc/AWP.md)_
 
 ## 🧪 Testing
 
