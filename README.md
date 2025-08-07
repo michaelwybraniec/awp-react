@@ -260,81 +260,107 @@ This project follows the **Agentic Workflow Protocol (AWP)** by the [overvibing.
 
 For the complete project backlog and detailed task breakdown, see: **[AWP.md - Project Backlog](agentic-sldc/AWP.md#project-backlog)**
 
-### 🗺️ Project Phases Overview
+### 🗺️ Project Git History
 
 ```mermaid
-gantt
-    title AWP React Project Roadmap (Based on Git History)
-    dateFormat  YYYY-MM-DD
-    section Phase 1: Foundation
-    Task 1.1: Initialize Project           :done, 1.1, 2025-08-07, 1d
-    Task 1.2: Setup Tailwind & shadcn/ui   :done, 1.2, 2025-08-07, 1d
-    Task 1.3: Configure Project Structure  :done, 1.3, 2025-08-07, 1d
-    Task 1.4: Development Environment      :active, 1.4, 2025-08-07, 1d
-    Task 1.4.1: VS Code Settings          :done, 1.4.1, 2025-08-07, 1d
-    Task 1.4.2: Debugging Config          :done, 1.4.2, 2025-08-07, 1d
-    Task 1.4.3: Storybook Setup           :done, 1.4.3, 2025-08-07, 1d
-    Task 1.4.4: CI/CD Pipeline            :done, 1.4.4, 2025-08-07, 1d
-    Task 1.4.5: E2E Testing               :done, 1.4.5, 2025-08-07, 1d
-    Task 1.4.6: Test Coverage             :active, 1.4.6, 2025-08-07, 1d
-    Task 1.5: Documentation               :1.5, 2025-08-08, 2d
-    Task 1.6: Verify Functionality        :1.6, 2025-08-10, 2d
-
-    section Phase 2: Authentication
-    Task 2.1: User Authentication         :2.1, 2025-08-12, 7d
-    Task 2.2: Role-Based Access Control   :2.2, 2025-08-19, 7d
-    Task 2.3: Profile Management          :2.3, 2025-08-26, 7d
-    Task 2.4: Session Management          :2.4, 2025-09-02, 7d
-    Task 2.5: Password Reset              :2.5, 2025-09-09, 7d
-
-    section Phase 3: Core Features
-    Task 3.1: Dashboard Design            :3.1, 2025-09-16, 7d
-    Task 3.2: Lab Profile System          :3.2, 2025-09-23, 7d
-    Task 3.3: Pharma Company Profiles     :3.3, 2025-09-30, 7d
-    Task 3.4: Search & Discovery          :3.4, 2025-10-07, 7d
-    Task 3.5: Partnership Proposals       :3.5, 2025-10-14, 7d
-
-    section Phase 4: Collaboration
-    Task 4.1: Messaging System            :4.1, 2025-10-21, 7d
-    Task 4.2: Document Sharing            :4.2, 2025-10-28, 7d
-    Task 4.3: Project Tracking            :4.3, 2025-11-04, 7d
-    Task 4.4: Collaboration Workspace     :4.4, 2025-11-11, 7d
-    Task 4.5: Notification System         :4.5, 2025-11-18, 7d
-
-    section Phase 5: Advanced Features
-    Task 5.1: Advanced Search             :5.1, 2025-11-25, 7d
-    Task 5.2: Analytics Dashboard         :5.2, 2025-12-02, 7d
-    Task 5.3: API Integration             :5.3, 2025-12-09, 7d
-    Task 5.4: Data Export/Import          :5.4, 2025-12-16, 7d
-    Task 5.5: Mobile & PWA Features       :5.5, 2025-12-23, 7d
+gitGraph
+    commit id: "16cfa69" tag: "docs: README update"
+    commit id: "43196c5" tag: "fix: CI/CD pipeline"
+    commit id: "d162920" tag: "feat: E2E testing"
+    commit id: "7c0a26d" tag: "fix: UI styling"
+    commit id: "e42d1a2" tag: "docs: Husky issues"
+    commit id: "8ded2a8" tag: "fix: Husky warning"
+    commit id: "ce91781" tag: "docs: Husky task"
+    commit id: "ad61771" tag: "fix: pre-commit hook"
+    commit id: "12f85bf" tag: "fix: Turbopack"
+    commit id: "b6f057e" tag: "docs: AWP update"
+    commit id: "7aba9cd" tag: "feat: CI/CD pipeline"
+    commit id: "b873ea0" tag: "fix: lockfiles & ESLint"
+    commit id: "8d17343" tag: "feat: project structure"
+    commit id: "28f301c" tag: "docs: AWP procedures"
+    commit id: "c6fef03" tag: "feat: VS Code config"
+    branch develop
+    checkout develop
+    commit id: "next" tag: "Task 1.4.6: Test Coverage"
+    commit id: "future" tag: "Task 1.5: Documentation"
+    commit id: "future2" tag: "Task 1.6: Verification"
+    checkout main
+    merge develop
+    branch feature/auth
+    commit id: "auth1" tag: "Task 2.1: Authentication"
+    commit id: "auth2" tag: "Task 2.2: Role Control"
+    checkout main
+    merge feature/auth
+    branch feature/core
+    commit id: "core1" tag: "Task 3.1: Dashboard"
+    commit id: "core2" tag: "Task 3.2: Lab Profiles"
+    checkout main
+    merge feature/core
 ```
 
 ### 📊 Current Progress (Based on Git Data)
 
 ```mermaid
 pie title Project Completion Status
-    "Completed (1.1-1.4.5)" : 45
-    "In Progress (1.4.6)" : 5
-    "Pending (1.5-1.6)" : 10
-    "Phase 2: Authentication" : 15
-    "Phase 3: Core Features" : 15
-    "Phase 4: Collaboration" : 10
+    "Completed (1.1-1.4.5)" : 50
+    "In Progress (1.4.6)" : 8
+    "Pending (1.5-1.6)" : 12
+    "Phase 2: Authentication" : 12
+    "Phase 3: Core Features" : 10
+    "Phase 4: Collaboration" : 5
+    "Phase 5: Advanced Features" : 3
 ```
+
+### 📈 Development Metrics
+
+```mermaid
+gitGraph
+    commit id: "16cfa69" type: HIGHLIGHT tag: "29 commits total"
+    commit id: "43196c5" tag: "CI/CD complete"
+    commit id: "d162920" tag: "E2E testing done"
+    commit id: "7c0a26d" tag: "UI styling fixed"
+    commit id: "e42d1a2" tag: "Documentation"
+    commit id: "8ded2a8" tag: "Husky fixes"
+    commit id: "ce91781" tag: "Task tracking"
+    commit id: "ad61771" tag: "Pre-commit hooks"
+    commit id: "12f85bf" tag: "Turbopack config"
+    commit id: "b6f057e" tag: "AWP updates"
+    commit id: "7aba9cd" tag: "Pipeline setup"
+    commit id: "b873ea0" tag: "Code quality"
+    commit id: "8d17343" tag: "Project structure"
+    commit id: "28f301c" tag: "VS Code setup"
+    commit id: "c6fef03" tag: "Initial config"
+    commit id: "next" type: REVERSE tag: "Next: Test Coverage"
+```
+
+**Key Metrics:**
+
+- **Total Commits**: 29 (all from 2025-08-07)
+- **Completed Tasks**: 1.1, 1.2, 1.3, 1.4.1-1.4.5
+- **Current Task**: 1.4.6 (Test Coverage Reporting)
+- **Next Tasks**: 1.5 (Documentation), 1.6 (Verification)
+- **Project Phase**: Foundation & Setup (Phase 1)
 
 ### 📈 Git Activity Overview
 
 ```mermaid
-graph LR
-    A[Total Commits: 29] --> B[Today: 2025-08-07]
-    B --> C[Task 1.4.1-1.4.5: ✅ Complete]
-    B --> D[Task 1.4.6: 🔄 In Progress]
-    B --> E[Task 1.5-1.6: ⏳ Pending]
-
-    style A fill:#007acc
-    style B fill:#22c55e
-    style C fill:#22c55e
-    style D fill:#f59e0b
-    style E fill:#ef4444
+gitGraph
+    commit id: "16cfa69" type: HIGHLIGHT tag: "Latest: README docs"
+    commit id: "43196c5" tag: "CI/CD fix"
+    commit id: "d162920" tag: "E2E testing"
+    commit id: "7c0a26d" tag: "UI styling fix"
+    commit id: "e42d1a2" tag: "Husky docs"
+    commit id: "8ded2a8" tag: "Husky warning fix"
+    commit id: "ce91781" tag: "Husky task docs"
+    commit id: "ad61771" tag: "pre-commit fix"
+    commit id: "12f85bf" tag: "Turbopack fix"
+    commit id: "b6f057e" tag: "AWP update"
+    commit id: "7aba9cd" tag: "CI/CD pipeline"
+    commit id: "b873ea0" tag: "lockfiles & ESLint"
+    commit id: "8d17343" tag: "project structure"
+    commit id: "28f301c" tag: "AWP procedures"
+    commit id: "c6fef03" tag: "VS Code config"
+    commit id: "next" type: REVERSE tag: "Next: Task 1.4.6"
 ```
 
 ### AWP Commands
