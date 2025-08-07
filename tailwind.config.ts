@@ -9,8 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary brand colors
+        background: '#ffffff',
+        foreground: '#171717',
+        card: {
+          DEFAULT: '#ffffff',
+          foreground: '#171717',
+        },
+        popover: {
+          DEFAULT: '#ffffff',
+          foreground: '#171717',
+        },
         primary: {
+          DEFAULT: '#3b82f6',
+          foreground: '#ffffff',
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -23,8 +34,9 @@ const config: Config = {
           900: '#1e3a8a',
           950: '#172554',
         },
-        // Secondary colors
         secondary: {
+          DEFAULT: '#64748b',
+          foreground: '#ffffff',
           50: '#f8fafc',
           100: '#f1f5f9',
           200: '#e2e8f0',
@@ -37,62 +49,21 @@ const config: Config = {
           900: '#0f172a',
           950: '#020617',
         },
-        // Success colors
-        success: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
-          950: '#052e16',
+        muted: {
+          DEFAULT: '#f1f5f9',
+          foreground: '#64748b',
         },
-        // Warning colors
-        warning: {
-          50: '#fffbeb',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f',
-          950: '#451a03',
+        accent: {
+          DEFAULT: '#f1f5f9',
+          foreground: '#171717',
         },
-        // Error colors
-        error: {
-          50: '#fef2f2',
-          100: '#fee2e2',
-          200: '#fecaca',
-          300: '#fca5a5',
-          400: '#f87171',
-          500: '#ef4444',
-          600: '#dc2626',
-          700: '#b91c1c',
-          800: '#991b1b',
-          900: '#7f1d1d',
-          950: '#450a0a',
+        destructive: {
+          DEFAULT: '#ef4444',
+          foreground: '#ffffff',
         },
-        // Neutral colors
-        neutral: {
-          50: '#fafafa',
-          100: '#f5f5f5',
-          200: '#e5e5e5',
-          300: '#d4d4d4',
-          400: '#a3a3a3',
-          500: '#737373',
-          600: '#525252',
-          700: '#404040',
-          800: '#262626',
-          900: '#171717',
-          950: '#0a0a0a',
-        },
+        border: '#e2e8f0',
+        input: '#e2e8f0',
+        ring: '#3b82f6',
       },
       fontFamily: {
         sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
