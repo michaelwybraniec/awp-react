@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    "ms-vscode.vscode-json",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.vscode-css-peek",
+    "johnpapa.vscode-peacock",
+    "ms-vscode.vscode-js-debug",
+    "ms-vscode.vscode-js-debug-companion",
+    "ms-vscode.vscode-html-css-support"
+  ]
+} 

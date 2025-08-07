@@ -1,25 +1,80 @@
 {
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "emmet.includeLanguages": {
+    "typescript": "html",
+    "typescriptreact": "html"
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/.git": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/coverage": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.next/**": true,
+    "**/dist/**": true
+  },
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "javascript.preferences.includePackageJsonAutoImports": "auto",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "json.schemas": [
+    {
+      "fileMatch": ["tsconfig.json"],
+      "url": "https://json.schemastore.org/tsconfig"
+    }
+  ],
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#435660",
-    "activityBar.background": "#435660",
+    "activityBar.activeBackground": "#032fc7",
+    "activityBar.background": "#032fc7",
     "activityBar.foreground": "#e7e7e7",
     "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#a37c96",
-    "activityBarBadge.foreground": "#15202b",
+    "activityBarBadge.background": "#1f0007",
+    "activityBarBadge.foreground": "#e7e7e7",
     "commandCenter.border": "#e7e7e799",
-    "sash.hoverBorder": "#435660",
-    "statusBar.background": "#2e3b42",
+    "sash.hoverBorder": "#032fc7",
+    "statusBar.background": "#022395",
     "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#435660",
-    "statusBarItem.remoteBackground": "#2e3b42",
+    "statusBarItem.hoverBackground": "#032fc7",
+    "statusBarItem.remoteBackground": "#022395",
     "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#2e3b42",
+    "titleBar.activeBackground": "#022395",
     "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#2e3b4299",
+    "titleBar.inactiveBackground": "#02239599",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#2e3b42",
-  "cSpell.words": [
-    "overvibing"
-  ]
+  "peacock.color": "#022395"
 }

@@ -134,8 +134,8 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 
   1.4. [ ] Set up development environment and tooling
 
-- [ ] 1.4.1. Configure VS Code settings and extensions
-- [ ] 1.4.2. Set up debugging configuration
+- [x] 1.4.1. Configure VS Code settings and extensions
+- [x] 1.4.2. Set up debugging configuration
 - [ ] 1.4.3. Set up Storybook for component documentation
 - [ ] 1.4.4. Configure CI/CD pipeline basics
 - [ ] 1.4.5. Set up E2E testing with Playwright or Cypress
@@ -319,7 +319,15 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 - [ ] 4.4.6. Write unit tests for workspace components and real-time features
 - [ ] 4.4.7. Create integration tests for collaboration tools and video conferencing
 
-  4.5. [ ] Add notification and alert system - [ ] 4.5.1. Implement real-time notifications with push support - [ ] 4.5.2. Create notification preferences and filtering - [ ] 4.5.3. Add email notification system with templates - [ ] 4.5.4. Implement notification history and management - [ ] 4.5.5. Create notification analytics and engagement tracking - [ ] 4.5.6. Write unit tests for notification system and push functionality - [ ] 4.5.7. Create integration tests for notification delivery and preferences
+  4.5. [ ] Add notification and alert system
+
+- [ ] 4.5.1. Implement real-time notifications with push support
+- [ ] 4.5.2. Create notification preferences and filtering
+- [ ] 4.5.3. Add email notification system with templates
+- [ ] 4.5.4. Implement notification history and management
+- [ ] 4.5.5. Create notification analytics and engagement tracking
+- [ ] 4.5.6. Write unit tests for notification system and push functionality
+- [ ] 4.5.7. Create integration tests for notification delivery and preferences
 
   4.6. [ ] Manual testing of collaboration tools
 
@@ -418,7 +426,7 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 
    2.4. Follow conventional commit standards.
 
-   2.5. Include relevant files.
+   2.5. Include relevant files and messages by checking git status what was changed in file with git diff?
 
 3. **next**
 
