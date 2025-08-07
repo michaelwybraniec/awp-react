@@ -25,7 +25,7 @@ export interface FormField {
   disabled?: boolean;
   options?: FormFieldOption[];
   validation?: FormValidation;
-  defaultValue?: any;
+  defaultValue?: unknown;
 }
 
 export interface FormFieldOption {
@@ -41,10 +41,10 @@ export interface FormValidation {
   pattern?: RegExp;
   min?: number;
   max?: number;
-  custom?: (value: any) => string | undefined;
+  custom?: (value: unknown) => string | undefined;
 }
 
-export interface FormState<T = Record<string, any>> {
+export interface FormState<T = Record<string, unknown>> {
   values: T;
   errors: Record<string, string>;
   touched: Record<string, boolean>;
@@ -53,9 +53,9 @@ export interface FormState<T = Record<string, any>> {
   isDirty: boolean;
 }
 
-export interface FormConfig<T = Record<string, any>> {
+export interface FormConfig<T = Record<string, unknown>> {
   initialValues: T;
-  validationSchema?: any; // Zod schema or similar
+  validationSchema?: unknown; // Zod schema or similar
   onSubmit: (values: T) => void | Promise<void>;
   onError?: (errors: Record<string, string>) => void;
   validateOnChange?: boolean;
@@ -72,8 +72,8 @@ export interface FormFieldProps {
   disabled?: boolean;
   error?: string;
   touched?: boolean;
-  value?: any;
-  onChange?: (value: any) => void;
+  value?: unknown;
+  onChange?: (value: unknown) => void;
   onBlur?: () => void;
   options?: FormFieldOption[];
 }
@@ -102,12 +102,12 @@ export interface FormError {
 
 export interface FormSuccess {
   message: string;
-  data?: any;
+  data?: unknown;
 }
 
-export interface FormContextValue<T = Record<string, any>> {
+export interface FormContextValue<T = Record<string, unknown>> {
   formState: FormState<T>;
-  setFieldValue: (name: string, value: any) => void;
+  setFieldValue: (name: string, value: unknown) => void;
   setFieldError: (name: string, error: string) => void;
   setFieldTouched: (name: string, touched: boolean) => void;
   handleSubmit: (e?: React.FormEvent) => void;

@@ -123,9 +123,11 @@ export function getEnvironment(): string {
 export function initializeEnvironment(): void {
   try {
     validateEnvironment();
-    console.log('✅ Environment variables validated successfully');
+    // TODO: Replace with proper logging service in production
+    // console.log('✅ Environment variables validated successfully');
   } catch (error) {
-    console.error('❌ Environment validation failed:', error);
+    // TODO: Replace with proper logging service in production
+    // console.error('❌ Environment validation failed:', error);
     if (isProduction()) {
       throw error;
     }

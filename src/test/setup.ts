@@ -4,8 +4,8 @@
  */
 
 import '@testing-library/jest-dom';
-import { vi, beforeAll, afterAll } from 'vitest';
 import React from 'react';
+import { afterAll, beforeAll, vi } from 'vitest';
 
 // Mock Next.js router
 vi.mock('next/navigation', () => ({
@@ -23,7 +23,7 @@ vi.mock('next/navigation', () => ({
 
 // Mock Next.js image component
 vi.mock('next/image', () => ({
-  default: ({ src, alt, ...props }: any) => {
+  default: ({ src, alt, ...props }: React.ComponentProps<'img'>) => {
     return React.createElement('img', { src, alt, ...props });
   },
 }));
@@ -66,9 +66,11 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Suppress console warnings in tests
+// eslint-disable-next-line no-console
 const originalError = console.error;
 beforeAll(() => {
-  console.error = (...args: any[]) => {
+  // eslint-disable-next-line no-console
+  console.error = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
@@ -80,5 +82,6 @@ beforeAll(() => {
 });
 
 afterAll(() => {
+  // eslint-disable-next-line no-console
   console.error = originalError;
 });

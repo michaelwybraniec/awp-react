@@ -3,7 +3,7 @@
  * Type definitions for API requests and responses
  */
 
-export interface ApiResponse<T = any> {
+export interface ApiResponse<T = unknown> {
   success: boolean;
   data?: T;
   message?: string;
@@ -21,7 +21,7 @@ export interface ApiError {
   message: string;
   code?: string;
   status?: number;
-  details?: Record<string, any>;
+  details?: Record<string, unknown>;
 }
 
 export interface PaginationParams {
@@ -30,7 +30,7 @@ export interface PaginationParams {
   sortBy?: string;
   sortOrder?: 'asc' | 'desc';
   search?: string;
-  filters?: Record<string, any>;
+  filters?: Record<string, unknown>;
 }
 
 export interface PaginatedResponse<T> {
@@ -48,8 +48,8 @@ export interface PaginatedResponse<T> {
 export interface ApiRequestConfig {
   method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   headers?: Record<string, string>;
-  params?: Record<string, any>;
-  data?: any;
+  params?: Record<string, unknown>;
+  data?: unknown;
   timeout?: number;
   withCredentials?: boolean;
 }
@@ -58,17 +58,17 @@ export interface ApiClient {
   get<T>(url: string, config?: ApiRequestConfig): Promise<ApiResponse<T>>;
   post<T>(
     url: string,
-    data?: any,
+    data?: unknown,
     config?: ApiRequestConfig
   ): Promise<ApiResponse<T>>;
   put<T>(
     url: string,
-    data?: any,
+    data?: unknown,
     config?: ApiRequestConfig
   ): Promise<ApiResponse<T>>;
   patch<T>(
     url: string,
-    data?: any,
+    data?: unknown,
     config?: ApiRequestConfig
   ): Promise<ApiResponse<T>>;
   delete<T>(url: string, config?: ApiRequestConfig): Promise<ApiResponse<T>>;

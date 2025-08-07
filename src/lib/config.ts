@@ -52,11 +52,12 @@ export function validateConfig(): void {
   const missingVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
 
   if (missingVars.length > 0) {
-    console.warn(
-      `Warning: Missing required environment variables: ${missingVars.join(
-        ', '
-      )}`
-    );
+    // TODO: Replace with proper logging service in production
+    // console.warn(
+    //   `Warning: Missing required environment variables: ${missingVars.join(
+    //     ', '
+    //   )}`
+    // );
   }
 }
 

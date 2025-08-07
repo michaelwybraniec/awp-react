@@ -51,7 +51,7 @@ export interface Notification {
   read: boolean;
   createdAt: string;
   actionUrl?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 export interface Pagination {
@@ -81,7 +81,7 @@ export interface FilterOption {
     | 'nin'
     | 'like'
     | 'ilike';
-  value: any;
+  value: unknown;
 }
 
 export interface SearchParams {
@@ -108,7 +108,7 @@ export interface MenuItem {
   id: string;
   label: string;
   href?: string;
-  icon?: React.ComponentType<any>;
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   children?: MenuItem[];
   disabled?: boolean;
   external?: boolean;
@@ -158,12 +158,12 @@ export interface ErrorState {
   error: string;
   code?: string;
   retry?: () => void;
-  details?: Record<string, any>;
+  details?: Record<string, unknown>;
 }
 
 export interface SuccessState {
   message: string;
-  data?: any;
+  data?: unknown;
   redirectTo?: string;
 }
 
