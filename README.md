@@ -84,6 +84,10 @@ awp-react/
 │   │   ├── forms/           # Form components
 │   │   ├── common/          # Common reusable components
 │   │   └── index.ts         # Components barrel exports
+│   ├── stories/             # Storybook stories and examples
+│   │   ├── *.stories.ts     # Component stories
+│   │   ├── *.tsx            # Example components
+│   │   └── *.css            # Story-specific styles
 │   ├── lib/                 # Shared utilities and configuration
 │   │   ├── config.ts        # Application configuration
 │   │   ├── constants.ts     # Application constants and enums
@@ -125,6 +129,9 @@ awp-react/
 │   ├── settings.json       # VS Code settings
 │   ├── extensions.json     # Recommended extensions
 │   └── launch.json         # Debugging configuration
+├── .storybook/             # Storybook configuration
+│   ├── main.ts            # Storybook main configuration
+│   └── preview.ts         # Storybook preview configuration
 ├── .husky/                 # Git hooks configuration
 ├── .prettierrc            # Prettier configuration
 ├── .prettierignore        # Prettier ignore rules
@@ -173,7 +180,8 @@ This project follows the **Agentic Workflow Protocol (AWP)** for human-AI collab
 - ✅ **Task 1.3.5**: Set up layout components and page structure
 - ✅ **Task 1.4.1**: Configure VS Code settings and extensions
 - ✅ **Task 1.4.2**: Set up debugging configuration
-- 🔄 **Next**: Task 1.4.3 - Set up Storybook for component documentation
+- ✅ **Task 1.4.3**: Set up Storybook for component documentation
+- 🔄 **Next**: Task 1.4.4 - Configure CI/CD pipeline basics
 
 ### AWP Commands
 
@@ -198,6 +206,8 @@ npm run test             # Run all tests
 npm run test:watch       # Run tests in watch mode
 npm run test:coverage    # Generate test coverage report
 npm run test:ui          # Open Vitest UI for interactive testing
+npm run storybook        # Start Storybook development server
+npm run build-storybook  # Build Storybook for production
 npm run clean            # Clean build artifacts
 npm run clean:all        # Clean everything including node_modules
 npm run reinstall        # Complete reinstall of dependencies
@@ -223,6 +233,7 @@ npm run reinstall        # Complete reinstall of dependencies
 - **Build Scripts**: Comprehensive development and build scripts
 - **Testing**: Complete testing setup with Vitest and React Testing Library
 - **VS Code Integration**: Optimized settings, extensions, and debugging configuration
+- **Storybook**: Component documentation and interactive development environment
 
 ## 🔧 Code Quality Tools
 
