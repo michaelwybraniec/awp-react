@@ -400,7 +400,10 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 ## Unplanned Tasks
 
 - [ ] 1.1: Test Coverage Review and Improvement - Review current test coverage and improve it to meet 80%+ threshold, focusing on critical user paths and edge cases
-- [ ] 1.2: Unplanned task, Name, Title, Description, etc.
+- [ ] 1.2: Fix Multiple Lockfiles Issue - Remove conflicting package-lock.json files and ensure single lockfile
+- [ ] 1.3: Address ESLint Warnings - Fix console statements and replace `any` types with proper TypeScript types
+- [ ] 1.4: Fix Tailwind CSS Configuration - Resolve unknown utility class `ring-primary-500` error
+- [ ] 1.5: Unplanned task, Name, Title, Description, etc.
 
 ## Procedures
 
@@ -415,6 +418,16 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
    1.4. Check for blockers, if any we notify humans.
 
    1.5. Ensure docs and code are aligned, of not, notify humans.
+
+   1.6. **Deep Project Structure Validation:** - List and verify all directories and files in project root - Check src/ directory structure matches README documentation - Verify all configuration files (.vscode/, config files) are documented - Ensure no missing files or directories in README - Cross-reference actual file tree with documented structure
+
+   1.7. **Code Quality Check:** - Run `npm run type-check` and report any TypeScript errors - Run `npm run lint` and document all warnings/errors - Check for console.log statements that should be removed - Verify no `any` types in production code - Ensure all imports are properly resolved
+
+   1.8. **Documentation Alignment:** - Verify all markdown files are up-to-date - Check that code examples in docs match actual code - Ensure README features list matches implemented features - Verify installation instructions work correctly - Check that all referenced files actually exist
+
+   1.9. **Build and Test Verification:** - Ensure `npm run build` completes successfully - Verify `npm run dev` starts without errors - Check that all npm scripts are functional - Validate test suite runs without failures - Confirm environment variables are properly configured
+
+   1.10. **Dependency and Configuration Audit:** - Check for conflicting lockfiles or dependency issues - Verify all configuration files are properly formatted - Ensure no sensitive data in committed files - Check for outdated dependencies or security issues - Validate all path aliases and imports work correctly
 
 2. **commit**
 
