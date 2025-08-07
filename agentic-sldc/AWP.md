@@ -404,7 +404,8 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 - [x] 1.3: Address ESLint Warnings - Fix console statements and replace `any` types with proper TypeScript types
 - [x] 1.4: Fix Tailwind CSS Configuration - Resolve unknown utility class `ring-primary-500` error
 - [x] 1.5: Address ESLint Warnings - Fix console statements and replace `any` types with proper TypeScript types
-- [ ] 1.6: Unplanned task, Name, Title, Description, etc.
+- [x] 1.6: Fix Next.js Turbopack Configuration - Update deprecated `experimental.turbo` to `config.turbopack` as Turbopack is now stable in Next.js 15.4.6
+- [ ] 1.7: Unplanned task, Name, Title, Description, etc.
 
 ## Procedures
 
