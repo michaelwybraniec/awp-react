@@ -413,6 +413,8 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 - [x] 1.12: Fix UI Styling Issues - Tailwind CSS styles not being applied, page rendering with basic unstyled HTML (black text, white background, blue underlined links) - Fixed Tailwind config to use standard color values instead of CSS variables, resolved all utility class errors
 - [ ] 1.13: Unplanned task, Name, Title, Description, etc.
 - [x] 1.14: Fix CI/CD Pipeline Configuration Issues - Fixed duplicate content in ci.yml, added proper error handling for E2E tests, improved coverage upload conditions, and resolved CI workflow structure
+- [ ] 1.15: E2E Test Content Validation - Verify that E2E tests expect content that actually exists on the page, ensure all test assertions match the current page content and navigation elements
+- [ ] 1.16: Configure Actual Deployment - Replace placeholder deployment configuration in CI/CD pipeline with actual deployment setup (Vercel, Netlify, or other platform)
 
 ## Procedures
 
