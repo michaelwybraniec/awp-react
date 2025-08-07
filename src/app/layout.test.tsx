@@ -26,6 +26,9 @@ vi.mock('@/lib/config', () => ({
   },
 }));
 
+// Mock CSS imports
+vi.mock('./globals.css', () => ({}));
+
 describe('RootLayout Component', () => {
   it('renders root layout with children', () => {
     render(
