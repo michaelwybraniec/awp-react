@@ -1,3 +1,80 @@
+# Project Code Summary
+
+## .vscode/settings.json
+
+```json
+{
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#435660",
+    "activityBar.background": "#435660",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#a37c96",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#435660",
+    "statusBar.background": "#2e3b42",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#435660",
+    "statusBarItem.remoteBackground": "#2e3b42",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#2e3b42",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#2e3b4299",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#2e3b42",
+  "cSpell.words": [
+    "overvibing"
+  ]
+}
+```
+
+## README.md
+
+```markdown
+# Hello
+
+Welcome to the demo about how to use AWP
+It is a methodology that allows scaling up software engineering with AI without overvibing.com
+
+## Project
+
+Please do the project considering this description
+
+Responsibilities:
+Develop and maintain high-quality UIs: Build responsive and dynamic user interfaces using React and TypeScript, applying strong UX design principles. Translate visual designs and product requirements into clean, efficient code, ensuring the interface is pixel-perfect, accessible, and user-friendly.
+Implement modern React features: Leverage the latest React capabilities, including React Server Components and Server-Side Rendering (SSR), to create fast and scalable applications.
+Architect a robust component library: Create and maintain a reusable component library/design system that enforces consistency across all our applications. 
+Collaborate on design & UX: Work closely with product designers and UX teams to review prototypes and iterate on designs. Provide front-end insights to ensure a healthy give-and-take between design and engineering.
+Integrate with backend services: Collaborate with backend engineers to define RESTful APIs and integrate frontend components with server data and SDKs. Ensure smooth communication between the frontend and backend and contribute to API design discussions to optimize data flows and performance.
+Agile development & iteration: Participate in an agile team environment, translating product requirements and user stories into fluid, user-centered features. Continuously refine the application through testing and feedback, aiming for an interface that is not just visually appealing but also intuitive and enjoyable for end users.
+Skills:
+
+Experience: 6+ years of professional experience building rich web applications with React and TypeScript.
+UX & Design Sense: Solid understanding of fundamental UX principles and a keen eye for UI design details. (You should be able to create interfaces that follow usability best practices and delight users.)
+React Expertise: Deep knowledge of modern React features and patterns (including hooks, context, and newer React 18+ features like Server Components and Suspense).
+Component Libraries: Proven experience in creating and maintaining reusable component libraries or design systems for large-scale applications.
+Collaboration: Experience working closely with backend engineers (and ideally designers) in an agile team environment. Comfortable discussing API contracts, providing feedback on designs, and iterating on features in a cross-functional setting.
+Problem-Solving: Strong debugging and performance optimization skills, with a focus on responsive design and cross-browser compatibility.
+Bonus Skills:
+Modern Frameworks: Familiarity with frameworks and tools such as Remix or Next.js (for full stack React and advanced routing/SSR capabilities).
+State Management & Data Fetching: Experience with libraries like React Query (for efficient server state management) or similar data fetching/caching solutions.
+Forms & Components: Knowledge of react-hook-form for building complex forms, and UI component kits like shadcn/ui, Chakra UI, etc., to accelerate development.
+Styling: Experience with Tailwind CSS or other CSS utility frameworks/CSS-in-JS libraries for rapid UI styling.
+Product Design Tools: Basic familiarity with design/prototyping tools (e.g. Figma or Sketch) is a plus – indicating you can comfortably discuss design details and even make minor design tweaks if needed.
+```
+
+## agentic-sldc/ASDLC.md
+
+```markdown
+Work in progres - overvibing.com
+
+```
+
+## agentic-sldc/AWP.md
+
+```markdown
 # Agentic Workflow Protocol (AWP)
 
 ## Hard instructions for AI agents
@@ -107,8 +184,8 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 ## Project Backlog
 
 ### 1. Project Foundation & Setup
-1. [x] 1.1: Initialize React TypeScript project with Next.js
-   - [x] 1.1.1. Set up Next.js 14+ with App Router and TypeScript
+1. [ ] 1.1: Initialize React TypeScript project with Next.js
+   - [ ] 1.1.1. Set up Next.js 14+ with App Router and TypeScript
    - [ ] 1.1.2. Configure ESLint, Prettier, and Husky for code quality
    - [ ] 1.1.3. Set up environment variables and configuration files
    - [ ] 1.1.4. Initialize Git repository with proper .gitignore
@@ -441,3 +518,82 @@ Michael Wybraniec (ONE-FRONT.COM, OVERVIBING.COM)
 - **examples:**
   - feat(api 3.1): add API endpoint
   - docs(readme 5.1): expand documentation
+
+```
+
+## agentic-sldc/README.md
+
+```markdown
+# 🚀 Welcome to Your Agentic SDLC Project
+
+Hello!  
+This project is powered by the [OVERVIBING.COM](https://overvibing.com) community.  
+We work together—humans and AI agents—to build a better, more collaborative, and transparent future for software development.
+
+Authored by [ONE-FRONT.COM](https://one-front.com)
+
+---
+
+## 🌟 What is Agentic SDLC?
+
+Agentic SDLC (Software Development Lifecycle) is a modern, collaborative approach to building software, where both humans and AI agents work together at every stage.  
+It emphasizes clarity, traceability, and continuous improvement, ensuring that all contributors—human or AI—are always in sync.
+
+---
+
+## 🧠 What is the Agentic Workflow Protocol (AWP)?
+
+AWP is a protocol and template for managing project tasks, ownership, and progress.  
+It provides a clear structure for onboarding, collaboration, and handoff between humans and AI agents, making your project future-proof and easy to maintain.
+
+---
+
+## 📂 Project Structure
+
+- 'README.md' - This file. Project overview, philosophy, and quickstart.
+- 'ASDLC.md' - Agentic SDLC plan and lifecycle documentation.
+- 'AWP.md' - Agentic Workflow Protocol template for your project.
+- 'src/' - Source code for your project.
+- 'agentic-sldc/' - Generated folder for SDLC and workflow docs.
+
+---
+
+## �� Getting Started
+
+1. Read through this README.md to understand the project's philosophy.
+2. Review ASDLC.md for the lifecycle plan and key milestones.
+3. Fill out AWP.md to define your workflow, roles, and steps.
+4. Sync with your team and AI agents - keep docs and code up to date!
+5. Use the commit standard (see AWP.md) for all changes.
+
+---
+
+## 🤖 Human + AI Collaboration
+
+- Clear roles: Both humans and AI agents have defined responsibilities.
+- Transparent workflow: Every step, handoff, and decision is documented.
+- Continuous improvement: Regularly review and update docs and code.
+
+---
+
+## 💡 Best Practices
+
+- Keep README.md, ASDLC.md, and AWP.md in sync with your codebase.
+- Reference step numbers in every commit message.
+- Use the procedures in AWP.md for updates, commits, and handoffs.
+- Encourage feedback and document blockers or suggestions.
+
+---
+
+## 🌐 Learn More
+
+- https://overvibing.com - Community, resources, and more.
+- https://one-front.com - Authorship and project leadership.
+
+---
+
+Happy building!  
+_The OVERVIBING.COM & ONE-FRONT.COM Team_
+
+```
+
